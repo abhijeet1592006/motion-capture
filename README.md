@@ -6,7 +6,7 @@ I'm **Abhijeet Singh**, and this project is one of my many experiments combining
 
 ## 📽️ Demo
 
-![DEMO](https://)
+![DEMO](https://github.com/abhijeet1592006/motion-capture/blob/main/demo.gif)
 
 ---
 
