@@ -34,8 +34,7 @@ I'm **Abhijeet Singh**, and this project is one of my many experiments combining
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/pose-tracker-bot.git
-
+git clone https://github.com/abhijeet1592006/motion-capture.git
 cd motion-capture
 ```
 ### 2. Install the Python dependencies
