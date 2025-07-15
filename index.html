@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="box" id="box">
+        <div class="arm circle"></div>
+        <div class="arm" id="arm">
+            <div class="larm circle"></div>
+
+            <div class="larm" id="larm">
+
+            </div>
+        </div>
+        <div class="arm b" id="arm-b">
+            <div class="larm circle b"></div>
+
+            <div class="larm b" id="larm-b"></div>
+        </div>
+
+        <div class="torso">
+
+        </div>
+
+        <div class="leg">
+            <div class="leg circle"></div>
+
+            <div class="lleg circle"></div>
+
+            <div class="lleg"></div>
+        </div>
+        <div class="leg b">
+            <div class="lleg circle b"></div>
+
+            <div class="lleg b"></div>
+        </div>
+
+
+
+    </div>
+
+
+    </div>
+
+
+
+</body>
+
+<script>
+    function update() {
+
+        let url = 'http://127.0.0.1:5000/'
+
+        response = async () => {
+            let da = await fetch(url)
+            data = await da.json()
+            right_arm_angle = (data.right_arm)
+            right_shoulder_angle = (data.right_shoulder)
+            left_arm_angle = (data.left_arm)
+            left_shoulder_angle = (data.left_shoulder)
+            document.getElementById("larm").style.transform = `rotate(${right_arm_angle}deg)`
+            document.getElementById("arm").style.transform = `rotate(${right_shoulder_angle}deg)`
+            document.getElementById("larm-b").style.transform = `rotate(${left_arm_angle}deg)`
+            document.getElementById("arm-b").style.transform = `rotate(${left_shoulder_angle}deg)`
+
+
+
+        }
+
+        response()
+        requestAnimationFrame(update)
+    }
+
+    update()
+</script>
+
+</html>
